@@ -10,7 +10,7 @@ const int smallestInterval = 100;
 // critical values
 // CO2 values are in ppm (particles per million)
 const int uncriticalCO2value = 400;
-const int criticalCO2value = 1000;
+const int criticalCO2value = 800;
 // tVOC values are in ppb (particles per billion)
 const int uncriticalTVOCvalue = 440;
 const int criticalTVOCvalue = 1300; 

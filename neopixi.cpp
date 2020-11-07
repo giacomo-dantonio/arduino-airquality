@@ -62,8 +62,8 @@ void NeoPixi::getLedHSVColor(int index, int & hue, int & sat, int & val)
 {
     if (index <= m_activeLed)
     {
-        // 0 is green, 21845 is red
-        hue = (int)floor(21845 * m_severity);
+        // 0 is green, 22027 is red
+        hue = (int)floor(22027 * m_severity);
         val = index < m_activeLed
             ? m_value
             : (int)floor(m_activeLedIntensity * m_value);

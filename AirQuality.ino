@@ -74,7 +74,7 @@ Adafruit_NeoPixel strip(LED_COUNT, LED_PIN, NEO_RGBW + NEO_KHZ800);
 
 
 // the number of the LED pin
-const int ledPin = 2;
+const int ledPin = 3;
 
 int lastCO2value = 0;
 int lastTVOCvalue = 0;
@@ -106,7 +106,7 @@ void setup()
 
   strip.begin();           // INITIALIZE NeoPixel strip object (REQUIRED)
   strip.show();            // Turn OFF all pixels ASAP
-  strip.setBrightness(50); // Set BRIGHTNESS to about 1/5 (max = 255)
+  strip.setBrightness(25); // Set BRIGHTNESS to about 1/10 (max = 255)
 }
 
 void updateLed()
@@ -172,18 +172,6 @@ void loop()
         Serial.print(blinkLed.getInterval());
         Serial.print("] severity[");
         Serial.print(neopixi.getSeverity());
-        Serial.print("]");
-
-        int hue, sat, val;
-        neopixi.getLedHSVColor(0, hue, sat, val);
-        Serial.print("] hue[");
-        Serial.print(hue);
-        Serial.print("]");
-        Serial.print("] sat[");
-        Serial.print(sat);
-        Serial.print("]");
-        Serial.print("] val[");
-        Serial.print(val);
         Serial.print("]");
 
         Serial.println();
